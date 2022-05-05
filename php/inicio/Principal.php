@@ -1,3 +1,18 @@
+<?php
+session_start();
+$correo = $_SESSION['Auntentificar'];
+
+if(!isset($correo)){
+
+    header("location: .../Inicio.html");
+    
+}else{
+
+    
+
+   
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,10 +21,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CISNEROS</title>
+    <title>RESTAURANT CISNEROS</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
@@ -23,16 +38,19 @@
                 </a>
 
                 <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="menu.html">menu</a>
-                    <a href="contacto.html">contacto</a>
-                    <a href="login.html">Iniciar sesion</a>
+                    <a href="../../nosotros.html">Nosotros</a>
+                    <a href="../../menu.html">menu</a>
+                    <a href="../../contacto.html">contacto</a>
+                  <?php  echo "<center><a href= 'SalirTrabajador.php'> Cerrar Sesión </a></center>"; ?>
                 </nav>
             </div>
             <!-- cierre barra-->
             <div class="texto-header">
+            <?php  echo "<center><h2>Bienvenido Usuario con el correo $correo </h2></center>"; ?>
+            <p>deleita tu paladar con las mejores recetas</p>
                 <h2 class="no-margin">El mejor restaurante de la ciudad</h2>
-                <p>deleita tu paladar con las mejores recetas</p>
+            
+                
             </div>
         </div>
         <!--contenedor-->
@@ -45,7 +63,7 @@
             <h2>Nuestro blog</h2>
             <article class="entrada-blog">
                 <div class="imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <img src="../../img/blog1.jpg" alt="imagen blog">
                 </div>
                 <!--imagen-->
                 <div class="contenido-blog">
@@ -57,7 +75,7 @@
             </article>
             <article class="entrada-blog">
                 <div class="imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                    <img src="../../img/blog2.jpg" alt="imagen blog">
                 </div>
                 <!--imagen-->
                 <div class="contenido-blog">
@@ -69,7 +87,7 @@
             </article>
             <article class="entrada-blog">
                 <div class="imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
+                    <img src="../../img/blog3.jpg" alt="imagen blog">
                 </div>
                 <!--imagen-->
                 <div class="contenido-blog">
@@ -89,14 +107,14 @@
                     <h4 class="no-margin">platos preferidos por los clientes</h4>
                     <p class="no margin">filete <span>de salmon</span></p>
                     <p class="no-margin">precio: <span> 25.000 </span></p>
-                    <a href="menu.html" class="btn btn-primario">Mas informacion</a>
+                    <a href="../../menu.html" class="btn btn-primario">Mas informacion</a>
                 </li>
 
                 <li class="menu">
                     <h4 class="no-margin">platos basicos</h4>
                     <p class="no-margin">pastas <span>con salsa boloñesa</span></p>
                     <p class="no-margin">precio: <span> 10.000 </span></p>
-                    <a href="menu.html" class="btn btn-secundario">Mas informacion</a>
+                    <a href="../../menu.html" class="btn btn-secundario">Mas informacion</a>
                 </li>
 
             </ul>
@@ -109,9 +127,9 @@
                 <p class="no-margin">kaliska<span>GOURMET</span></p>
 
                 <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="menu.html">menu</a>
-                    <a href="contacto.html">contacto</a>
+                    <a href="../../nosotros.html">Nosotros</a>
+                    <a href="../../menu.html">menu</a>
+                    <a href="../../contacto.html">contacto</a>
                 </nav>
 
             </div>
